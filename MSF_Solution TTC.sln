@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSF The_Three_Cases ConsoleApp1", "MSF The_Three_Cases ConsoleApp1\MSF The_Three_Cases ConsoleApp1.csproj", "{B7CA475A-61BC-4BCD-AEAE-587A403397D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTC ClassLibrary", "TTC ClassLibrary\TTC ClassLibrary.csproj", "{804698DC-E0E6-4B39-9FAD-DF5DBEF764FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7CA475A-61BC-4BCD-AEAE-587A403397D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CA475A-61BC-4BCD-AEAE-587A403397D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CA475A-61BC-4BCD-AEAE-587A403397D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CA475A-61BC-4BCD-AEAE-587A403397D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804698DC-E0E6-4B39-9FAD-DF5DBEF764FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804698DC-E0E6-4B39-9FAD-DF5DBEF764FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804698DC-E0E6-4B39-9FAD-DF5DBEF764FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804698DC-E0E6-4B39-9FAD-DF5DBEF764FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90FFEC85-591B-404C-855D-8BC3E19907E3}
+	EndGlobalSection
+EndGlobal
