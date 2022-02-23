@@ -21,7 +21,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             Console.Write("Tast her: ");
 
             //Integer input. Antal afleveringer.
-            int Afleveringer = Convert.ToInt32(Console.ReadLine());
+            int afleveringer = Convert.ToInt32(Console.ReadLine());
 
             //Beder brugeren om at indtaste om fodboldholdet har scoret mål.
             Console.WriteLine("\nHvis dit hold har scoret mål bedes du skrive mål." +
@@ -29,15 +29,15 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             Console.Write("Tast her: ");
 
             //String input. Mål værdi.
-            string Mål = Console.ReadLine();
-            string Målcheck = Mål.ToLower();
+            string mål = Console.ReadLine();
+            string målcheck = mål.ToLower();
 
             //Renser konsollen for tekst.
             Console.Clear();
 
             //Kalder resultatet fra den logiske del og udskriver det.
-            string Resultat = LClass1.FodboldL(Målcheck, Afleveringer);
-            Console.WriteLine(Resultat);
+            string resultat = LClass1.FodboldL(målcheck, afleveringer);
+            Console.WriteLine(resultat);
 
             //Stopper programmet indtil et tastetryk forekommer og fjerner derefter den forrige tekst i konsollen.
             Console.ReadKey();

@@ -16,7 +16,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             ///Menu.
 
             //Erklare variablen Svar.
-            string Svar = "";
+            string svar = "";
 
             //Do-While loop some køre menuen igennem ind til Svar indeholder 0
             do
@@ -31,13 +31,13 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                     "\nTast [ 2 ] for Danse konkurrence programmet." +
                     "\nTast [ 3 ] for Password programmet.\n");
                 Console.Write("Tast her: ");
-                Svar = Console.ReadLine();
+                svar = Console.ReadLine();
 
                 //fjerner den forrige tekst fra konsollen.
                 Console.Clear();
 
                 //Switch case som diregere hvilken handling skal udføres som følge af brugerns valg.
-                switch (Svar)
+                switch (svar)
                 {
                     //Informere brugeren om at programmet afsluttes, med en besked der vises i 2 sekunder før programmet lukker.
                     case "0":
@@ -67,7 +67,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                         break;
                 }
             }
-            while (Svar != "0");
+            while (svar != "0");
         }
     }
 }

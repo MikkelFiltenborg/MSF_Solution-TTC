@@ -13,29 +13,29 @@ namespace TTC_ClassLibrary
         ///Danse Konkurrence Logik
 
         //Metoden for at lave sætningen "Navn1 & Navn2".
-        public string DansL(string Navn1, string Navn2)
+        public string DansL(string navn1, string navn2)
         {
             //Boolean erklare NavnCheck som falsk.
-            bool NavnCheck = false;
+            bool navncheck = false;
 
             //Checker om Navn1 og Navn2 ikke indeholder tekst, hvis ja vil bool'en fortsat være erklaret falsk.
-            if(string.IsNullOrWhiteSpace(Navn1) && string.IsNullOrWhiteSpace(Navn2))
+            if(string.IsNullOrWhiteSpace(navn1) && string.IsNullOrWhiteSpace(navn2))
             {
-                NavnCheck = false;
+                navncheck = false;
             }
 
             //Erklare NavnCheck som sandt hvis både Navn1 og Navn2 ikke passer på lætningen i den overstående if erklaring.
             else 
             { 
-                NavnCheck = true;
+                navncheck = true;
             }
 
             //Kontrollere om NavnCheck er true.
-            if (NavnCheck == true)
+            if (navncheck == true)
             {
                 //Laver en string ved navn Deltagere og sætter Navn1 og Navn2 sammen med et & tegn imemmel.
-                string Deltagere = (Navn1 + " & " + Navn2);
-                return Deltagere;
+                string deltagere = (navn1 + " & " + navn2);
+                return deltagere;
             }
 
             //Giver en fejlmeddelse hvis NavnCheck er falsk.
@@ -46,17 +46,17 @@ namespace TTC_ClassLibrary
         }
 
         //Metoden for at lægge Point1 og Point2 sammen.
-        public int DansL(int Point1, int Point2)
+        public int DansL(int point1, int point2)
         {
             //Lægger værdien af DancePoint oven i Point og gemmer det i DancePoint.
-            return Point1 + Point2;
+            return point1 + point2;
         }
 
         //Metoden for at sammensætte Navnene og pointene til en sætning.
-        public string DansL(string Deltagere, int Resultat)
+        public string DansL(string deltagere, int resultat)
         {
             //Udskriver detalger1 og deltager2 efterfulgt af DancePoint værdien.
-            return (Deltagere + " " + Resultat);
+            return (deltagere + " " + resultat);
         }
     }
 }

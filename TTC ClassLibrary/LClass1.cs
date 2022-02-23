@@ -12,32 +12,32 @@ namespace TTC_ClassLibrary
         ///11-02-2022
         ///Fodbold - fan support på lægterne Logik
 
-        public static string FodboldL(string Målcheck, int Afleveringer)
+        public static string FodboldL(string målcheck, int afleveringer)
         {
             //Finder ud af hvad brugeren har indtastet og giver et passende respons.
-            if (Målcheck != "mål")
+            if (målcheck != "mål")
             {
                 //Checker om der er mindre end 1 aflevering.
-                if (Afleveringer < 1)
+                if (afleveringer < 1)
                 {
                     return ("shh");
                 }
 
                 //Checker om der er 1 eller mere og mindre end 10 afleveringer.
-                else if (Afleveringer >= 1 && Afleveringer < 10)
+                else if (afleveringer >= 1 && afleveringer < 10)
                 {
-                    string Huh = "";
+                    string huh = "";
 
                     //Gentager udskriften Huh! ind til i har samme numeriske værdi som afleveringer.
-                    for (int i = 0; i < Afleveringer; i++)
+                    for (int i = 0; i < afleveringer; i++)
                     {
-                        Huh = Huh + "Huh! ";
+                        huh = huh + "Huh! ";
                     }
-                    return Huh;
+                    return huh;
                 }
 
                 //Checker om der er 10 eller flere afleveringer.
-                else if (Afleveringer >= 10)
+                else if (afleveringer >= 10)
                 {
                     return("High Five - Jubel!!!");
                 }
@@ -50,7 +50,7 @@ namespace TTC_ClassLibrary
             }
 
             //Udskriver sætningen Olé Olé Olé hvis brugeren indtaster ordet mål.
-            else if (Målcheck == "mål")
+            else if (målcheck == "mål")
             {
                 return("Olé Olé Olé");
             }
