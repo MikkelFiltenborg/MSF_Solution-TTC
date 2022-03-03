@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,10 +96,12 @@ namespace TTC_ClassLibrary
         }
 
         //Checker om Passworded og Brugernavnet er ens, når bogstaver ikke er case sensitive.
-        public static bool PasswordL_Compare(string brugernavn, string password)
+        public static bool PasswordL_Compare(string password)
         {
+            //Skal kalde brugernavn fra password.txt
+            string bruger = "Bruger1";
 
-            if (brugernavn.ToLower() != password.ToLower())
+            if (bruger.ToLower() != password.ToLower())
             {
                 //Godkendt.
                 return true;
@@ -112,37 +115,91 @@ namespace TTC_ClassLibrary
         }
 
         //Login check.
-        public static bool PasswordL_Login(string password, string brugernavn)
+        public static bool PasswordL_Check(string password)
         {
-            bool login = LClass3.PasswordL_Compare(brugernavn, password) &&
+            //Password krav kontrol.
+            bool login = LClass3.PasswordL_Compare(password) &&
                 LClass3.PasswordL_Capital(password) &&
                 LClass3.PasswordL_Length(password) &&
                 LClass3.PasswordL_Number(password) &&
                 LClass3.PasswordL_Space(password) &&
                 LClass3.PasswordL_Char(password);
 
-            if(login == true)
+            if (login == true)
             {
+                //Godkendt.
                 return true;
             }
 
             else
             {
+                //Ikke godkendt.
                 return false;
             }
         }
-        public static bool BrugernavnL_Check(string brugernavn)
-        {
-            string data = "";
 
-            if (brugernavn == data) 
+        //Password til Nypassword check.
+        public static bool PasswordL_NyCheck(string password, string nypassword)
+        {
+            if (password.ToLower() != nypassword.ToLower())
             {
+                //Godkendt.
                 return true;
             }
-            
+
             else
             {
+                //Ikke godkendt.
                 return false;
+            }
+        }
+
+        //Login kontrol.
+        public static bool LoginL_Check(string bruger, string filnavn, string password)
+        {
+            bool passwordcheck;
+
+            //Checker password fil oprettelse og validitet.
+            if (!File.Exists(filnavn))
+            {
+                //Password krav kontrol
+                passwordcheck = LClass3.PasswordL_Check(password);
+
+                if (passwordcheck == true)
+                {
+                    //Opretter og gemmer tekst i .txt fil.
+                    using (StreamWriter writer = File.CreateText(filnavn))
+                    {
+                        writer.Write("Bruger1\n" + password);
+                    }
+                    //Godkendt.
+                    return true;
+                }
+
+                else
+                {
+                    //Ikke godkendt.
+                    return false;
+                }
+            }
+
+            //Checker login validitet.
+            else
+            {
+                //log = bruger (linjeskift) password, filinhold trukket fra .txt filen.
+                string login = bruger + "\n" + password, filindhold = File.ReadAllText(filnavn);
+
+                if (login == filindhold)
+                {
+                    //Godkendt.
+                    return true;
+                }
+
+                else
+                {
+                    //Ikke godkendt.
+                    return false;
+                }
             }
         }
     }
