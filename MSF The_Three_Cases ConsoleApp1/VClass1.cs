@@ -18,7 +18,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
         {
             //Beder brugeren om at indtaste hvor mange afleveringer fodboldholdet har lavet.
             Console.WriteLine("Hvor mange afleveringer lavede fodboldholdet?");
-            Console.Write("Tast her: ");
+            Console.Write("\nSkriv her: ");
 
             //Integer input. Antal afleveringer.
             int afleveringer = Convert.ToInt32(Console.ReadLine());
@@ -26,7 +26,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             //Beder brugeren om at indtaste om fodboldholdet har scoret mål.
             Console.WriteLine("\nHvis dit hold har scoret mål bedes du skrive mål." +
                 "\nHvis ikke, tryk på ENTER for at fortsætte.");
-            Console.Write("Tast her: ");
+            Console.Write("\nSkriv her: ");
 
             //String input. Mål værdi.
             string mål = Console.ReadLine();

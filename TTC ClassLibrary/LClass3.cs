@@ -11,7 +11,7 @@ namespace TTC_ClassLibrary
     public class LClass3
     {
         ///MSF
-        ///xx-02-2022
+        ///23-02-2022
         ///Oprettelse af gyldigt Password Logik
 
         //Checker om Passworded anvender mindst 12 tegn.
@@ -200,6 +200,34 @@ namespace TTC_ClassLibrary
                     //Ikke godkendt.
                     return false;
                 }
+            }
+        }
+
+        //Password Overwrite.
+        public static bool PasswordL_Overwrite (string filnavn, string password, string nypassword)
+        {
+            bool nypasscheck = LClass3.PasswordL_NyCheck(password, nypassword);
+
+            if (nypasscheck == true)
+            {
+                //Læser teksten fra filen og gemmer dem i .
+                string[] indhold = File.ReadAllLines(filnavn);
+
+                string bruger = indhold[0];
+
+                using (StreamWriter writer = File.CreateText(filnavn))
+                {
+                    writer.Write(bruger + "\n" + nypassword);
+                }
+
+                //Godkendt.
+                return true;
+            }
+
+            else
+            {
+                //Ikke godkendt.
+                return false;
             }
         }
     }
