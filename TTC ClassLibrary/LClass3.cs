@@ -14,7 +14,7 @@ namespace TTC_ClassLibrary
         ///23-02-2022
         ///Oprettelse af gyldigt Password Logik
 
-        //Checker om Passworded anvender mindst 12 tegn.
+        //Checker om Passwordet anvender mindst 12 tegn.
         public static bool PasswordL_Length(string password)
         {
             if (password.Length >= 12)
@@ -30,7 +30,7 @@ namespace TTC_ClassLibrary
             }
         }
 
-        //Checker om Passworded anvender både store og små bogstaver.
+        //Checker om Passwordet anvender både store og små bogstaver.
         public static bool PasswordL_Capital(string password)
         {
             if (password.Equals(password.ToLower()) || password.Equals(password.ToUpper()))
@@ -45,7 +45,7 @@ namespace TTC_ClassLibrary
             }
         }
 
-        //Checker om Passworded anvender mindst 1 specialtegn.
+        //Checker om Passwordet anvender mindst 1 specialtegn.
         public static bool PasswordL_Char(string password)
         {
             for (int i = 0; i < password.Length; i++)
@@ -61,7 +61,7 @@ namespace TTC_ClassLibrary
 
         }
 
-        //Checker om Passworded anvender tal i starten eller slutningen.
+        //Checker om Passwordet anvender tal i starten eller slutningen.
         public static bool PasswordL_Number(string password)
         {
             int i = password.Length;
@@ -78,7 +78,7 @@ namespace TTC_ClassLibrary
             }
         }
 
-        //Checker om Passworded anvender mellemrum.
+        //Checker om Passwordet anvender mellemrum.
         public static bool PasswordL_Space(string password)
         {
             if (password.Contains(" "))
@@ -95,7 +95,7 @@ namespace TTC_ClassLibrary
 
         }
 
-        //Checker om Passworded og Brugernavnet er ens, når bogstaver ikke er case sensitive.
+        //Checker om Passwordet og Brugernavnet er ens, når bogstaver ikke er case sensitive.
         public static bool PasswordL_Compare(string password)
         {
             //Skal kalde brugernavn fra password.txt
@@ -186,7 +186,7 @@ namespace TTC_ClassLibrary
             //Checker login validitet.
             else
             {
-                //log = bruger (linjeskift) password, filinhold trukket fra .txt filen.
+                //log = bruger (linjeskift) password, fil-indhold trukket fra .txt filen.
                 string login = bruger + "\n" + password, filindhold = File.ReadAllText(filnavn);
 
                 if (login == filindhold)

@@ -42,7 +42,7 @@ namespace TTC_ClassLibrary
                     return("High Five - Jubel!!!");
                 }
 
-                //Informere brugeren at det indtastede input er ugyldigt og fortæller, at de kan retunere til selektionen ved et tastetryk.
+                //Informere brugeren at det indtastede input er ugyldigt og fortæller, at de kan returnere til selektionen ved et tastetryk.
                 else
                 {
                     return ("Ugyldig Input \n Tryk på en tast for at komme tilbage til selektionen");
@@ -55,7 +55,7 @@ namespace TTC_ClassLibrary
                 return("Olé Olé Olé");
             }
 
-            //Informere brugeren at det indtastede input er ugyldigt og fortæller, at de kan retunere til selektionen ved et tastetryk.
+            //Informere brugeren at det indtastede input er ugyldigt og fortæller, at de kan returnere til selektionen ved et tastetryk.
             else
             {
                 return("Ugyldig Input \n Tryk på en tast for at komme tilbage til selektionen");

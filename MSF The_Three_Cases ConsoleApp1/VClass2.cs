@@ -16,7 +16,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
 
         public static void DansV()
         {
-            //Erklare strings og integers.
+            //Erklære strings og integers.
             string navn1, navn2, svar;
             int point1, point2;
 
@@ -35,7 +35,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 switch (svar)
                 {
                     case "0":
-                        //Informere brugeren om at de retunere til menuen
+                        //Informere brugeren om at de returnere til menuen
                         Console.WriteLine("Retunere til menuen");
                         Thread.Sleep(1000);
                         break;
@@ -65,7 +65,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                         DancerPoints deltager1 = new DancerPoints(navn1, point1);
                         DancerPoints deltager2 = new DancerPoints(navn2, point2);
 
-                        //Obejkt resultat sammenlægger deltager1 og deltager2 via operator overload +.
+                        //Objekt resultat sammenlægger deltager1 og deltager2 via operator overload +.
                         DancerPoints resultat = deltager1 + deltager2;
 
                         //udskriver resultatet for Navn + Point.

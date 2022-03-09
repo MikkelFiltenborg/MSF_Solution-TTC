@@ -30,7 +30,7 @@ namespace TTC_ClassLibrary
 
             string deltagere = $"{deltager1.Navn} & {deltager2.Navn} ";
 
-            //Opretter etobject som sammenlægger deltagere og totalpoint.
+            //Opretter et objekt som sammenlægger deltagere og totalpoint.
             DancerPoints resultat = new DancerPoints(deltagere, totalpoint);
 
             return resultat;

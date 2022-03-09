@@ -61,7 +61,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             string bruger = "", password, filnavn = @"C:\Users\MikFil\Desktop\Password.txt";
             bool login;
 
-            //Hvis filen Password.txt ikke finden bruges denne del.
+            //Hvis filen Password.txt ikke findes, bruges denne del.
             if (!File.Exists(filnavn))
             {
                 Console.WriteLine("Brugernavnet [ Bruguer1 ] er oprettet.\n");
@@ -94,7 +94,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                     Console.Clear();
                 }
 
-                //Hvis login = false, informeres brugeren om at deres password ikke er gyldt da kravne ikke blev opfyldt.
+                //Hvis login = false, informeres brugeren om at deres password ikke er gyldig da kravene ikke blev opfyldt.
                 else
                 {
                     Console.WriteLine("Ugyldigt password\nKrav ikke opfyldt");
@@ -103,7 +103,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 }
             }
 
-            //Informere brugeren om at en brugere allerede finden, og derfor kan en ny bruger ikke oprettes.
+            //Informere brugeren om at en brugere allerede findes, og derfor kan en ny bruger ikke oprettes.
             else
             {
                 Console.WriteLine("En bruger findes i allerede\nNy bruger kan ikke oprettes");

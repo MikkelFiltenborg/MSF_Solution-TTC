@@ -16,7 +16,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             ///11-02-2022
             ///Menu.
 
-            //Erklare variablen Svar.
+            //Erklære variablerne Svar og valg.
             string svar, valg;
 
             do
@@ -61,7 +61,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                                 //fjerner den forrige tekst fra konsollen.
                                 Console.Clear();
 
-                                //Switch case som diregere hvilken handling skal udføres som følge af brugerns valg.
+                                //Switch case som dirigere hvilken handling skal udføres som følge af brugerens valg.
                                 switch (svar)
                                 {
                                     //Informere brugeren om at programmet afsluttes, med en besked der vises i 2 sekunder før programmet lukker.
@@ -85,7 +85,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                                         VClass3.ChangePassword();
                                         break;
 
-                                    //Informere brugeren om at indtastningen ikke stemmer med nogle af de gyldige valgmuligheder, og vender tilbage til menuens start efter 1 sekundt.
+                                    //Informere brugeren om at indtastningen ikke stemmer med nogle af de gyldige valgmuligheder, og vender tilbage til menuens start efter 1 sekund.
                                     default:
                                         Console.WriteLine("Ugyldig input.");
                                         Thread.Sleep(1000);
@@ -114,7 +114,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                         Thread.Sleep(2000);
                         break;
 
-                    //Fejlmeddelse.
+                    //Fejlmeddelelse.
                     default:
                         Console.WriteLine("Ugyldigt input.");
                         Thread.Sleep(1000);
