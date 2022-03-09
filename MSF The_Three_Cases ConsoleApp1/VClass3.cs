@@ -21,6 +21,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             string bruger, password, filnavn = @"C:\Users\MikFil\Desktop\Password.txt";
             bool login;
 
+            //Beder brugren om deres login.
             Console.WriteLine("Indtast venligst dit brugernavn");
             Console.Write("\nSkriv her: ");
             bruger = Console.ReadLine();
@@ -29,13 +30,14 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             Console.Write("\nSkriv her: ");
             password = Console.ReadLine();
 
+            //Kalder metoden LoginL_Check.
             login = LClass3.LoginL_Check(bruger, filnavn, password);
 
             Console.Clear();
 
+            //Hvis login = true, informeres brugeren om at deres login er bekræftet.
             if (login == true)
             {
-
                 Console.WriteLine("Brugernavn Godkendt\n");
                 Thread.Sleep(500);
                 Console.WriteLine("Password godkendt");
@@ -44,6 +46,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 return true;
             }
 
+            //Hvis login = false, informere brugeren om at deres login ikke er korrekt.
             else
             {
                 Console.WriteLine("Ugyldigt brugernavn eller password");
@@ -58,10 +61,12 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             string bruger = "", password, filnavn = @"C:\Users\MikFil\Desktop\Password.txt";
             bool login;
 
+            //Hvis filen Password.txt ikke finden bruges denne del.
             if (!File.Exists(filnavn))
             {
                 Console.WriteLine("Brugernavnet [ Bruguer1 ] er oprettet.\n");
 
+                //Password krav.
                 Console.WriteLine("Dit nye password skal opfylde følgende krav:\n" +
                             " - Tal må ikke være i starten eller slutningen\n" +
                             " - Skal indeholde både store og små bogstaver\n" +
@@ -73,10 +78,13 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 Console.WriteLine("Indtast venligst et password");
                 Console.Write("\nSkriv her: ");
                 password = Console.ReadLine();
+
                 Console.Clear();
 
+                //Kalder metoden LoginL_Check.
                 login = LClass3.LoginL_Check(bruger, filnavn, password);
 
+                //Hvis login = true, informeres brugeren om at deres login er bekræftet.
                 if (login == true)
                 {
                     Console.WriteLine("Godkendt password\n");
@@ -86,14 +94,16 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                     Console.Clear();
                 }
 
+                //Hvis login = false, informeres brugeren om at deres password ikke er gyldt da kravne ikke blev opfyldt.
                 else
                 {
                     Console.WriteLine("Ugyldigt password\nKrav ikke opfyldt");
-                    Thread.Sleep(2000);
+                    Thread.Sleep(2500);
                     Console.Clear();
                 }
             }
 
+            //Informere brugeren om at en brugere allerede finden, og derfor kan en ny bruger ikke oprettes.
             else
             {
                 Console.WriteLine("En bruger findes i allerede\nNy bruger kan ikke oprettes");
@@ -108,6 +118,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             string bruger, password, nypassword, filnavn = @"C:\Users\MikFil\Desktop\Password.txt";
             bool login, passcheck, nypasscheck;
 
+            //Beder brugeren om at indtaste deres login.
             Console.WriteLine("Indtast venligst dit brugernavn");
             Console.Write("\nSkriv her: ");
             bruger = Console.ReadLine();
@@ -117,8 +128,10 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             password = Console.ReadLine();
             Console.Clear();
 
+            //Kalder metoden LoginL_Check.
             login = LClass3.LoginL_Check(bruger, filnavn, password);
 
+            //Informere brugeren at deres login er korrekt.
             if (login == true)
             {
                 Console.Clear();
@@ -128,6 +141,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 Thread.Sleep(1000);
                 Console.Clear();
 
+                //Password krav.
                 Console.WriteLine("Du kan nu ændre dit password");
                 Console.WriteLine("\nDit nye password skal opfylde følgende krav:" +
                     " - \nTal må ikke være i starten eller slutningen" +
@@ -140,26 +154,31 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 Console.Write("\nSkriv nyt password her: ");
                 nypassword = Console.ReadLine();
 
+                //Kalder metoden PasswordL_Capital.
                 passcheck = LClass3.PasswordL_Capital(nypassword);
 
+                //Kalder metoden PasswordL_NyCheck.
                 nypasscheck = LClass3.PasswordL_NyCheck(password, nypassword);
 
+                //Bruges kun hvis den bolske værdi fra både passcheck og nypasscheck = true.
                 if (passcheck == true && nypasscheck == true)
                 {
-                    //overwrite previous password.
+                    //Kalder metoden PasswordL_Overwrite.
                     LClass3.PasswordL_Overwrite(filnavn, password, nypassword);
 
                     Console.WriteLine("Dit password er nu ændret");
                     Thread.Sleep(1000);
                 }
 
+                //Informere brugeren at det nye password ikke overholder kravne.
                 else
                 {
-                    Console.WriteLine("Dit password overholder ikke minimum krav");
+                    Console.WriteLine("Dit nye password overholder ikke minimum krav");
                     Thread.Sleep(2000);
                 }
             }
 
+            //Informere brugeren at deres login ikke er korrekt.
             else
             {
                 Console.WriteLine("Ugyldigt brugernavn eller password");

@@ -206,15 +206,19 @@ namespace TTC_ClassLibrary
         //Password Overwrite.
         public static bool PasswordL_Overwrite (string filnavn, string password, string nypassword)
         {
+            //Kalder PasswordL_NyCheck og gemmer den bolske værdi i nypasscheck.
             bool nypasscheck = LClass3.PasswordL_NyCheck(password, nypassword);
 
+            //Bruges hvis nypasscheck = true.
             if (nypasscheck == true)
             {
-                //Læser teksten fra filen og gemmer dem i .
+                //Læser teksten fra filen og gemmer dem i indhold.
                 string[] indhold = File.ReadAllLines(filnavn);
 
+                //Gemmer det første ord fra indhold i bruger.
                 string bruger = indhold[0];
 
+                //Gemmer til filen Password.txt med bruger (linjeskift) nypassword.
                 using (StreamWriter writer = File.CreateText(filnavn))
                 {
                     writer.Write(bruger + "\n" + nypassword);
@@ -224,6 +228,7 @@ namespace TTC_ClassLibrary
                 return true;
             }
 
+            //Bruges hvis nypasscheck = false.
             else
             {
                 //Ikke godkendt.

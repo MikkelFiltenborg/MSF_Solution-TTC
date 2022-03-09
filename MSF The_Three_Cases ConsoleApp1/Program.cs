@@ -23,7 +23,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             {
                 Console.Clear();
 
-                //Password menu.
+                //Hovedmenu.
                 Console.WriteLine("Password programmet\n\nHer kan du\n" +
                     "\nLogin              - [ 1 ]" +
                     "\nOpret Bruger       - [ 2 ]" +
@@ -37,6 +37,8 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 {
                     //Login.
                     case "1":
+
+                        //Kalder metoden Login.
                         bool login = VClass3.Login();
 
                         if (login == true)
@@ -93,6 +95,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                             while (svar != "0");
                         }
 
+                        //Skal være der for at koden kan have en returværdi når login = false.
                         else
                         {
                         }
@@ -101,6 +104,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
 
                     //Opret bruger og password.
                     case "2":
+                        //Kalder metoden NewUser.
                         VClass3.NewUser();
                         break;
 

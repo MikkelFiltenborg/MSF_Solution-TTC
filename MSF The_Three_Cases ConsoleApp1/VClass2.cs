@@ -22,6 +22,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
 
             do
             {
+                //Danse konkurrence menu.
                 Console.WriteLine("Danse konkurrencen" +
                     "\n\nHer kan du" +
                     "\nBeregn dansernes point  - [ 1 ]" +
@@ -34,7 +35,8 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 switch (svar)
                 {
                     case "0":
-                        Console.WriteLine("Retunere til hovedmenuen");
+                        //Informere brugeren om at de retunere til menuen
+                        Console.WriteLine("Retunere til menuen");
                         Thread.Sleep(1000);
                         break;
 
@@ -59,7 +61,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                         //Renser konsollen.
                         Console.Clear();
 
-                        //Opretter
+                        //Opretter to objekter, deltager1 og deltager2.
                         DancerPoints deltager1 = new DancerPoints(navn1, point1);
                         DancerPoints deltager2 = new DancerPoints(navn2, point2);
 
