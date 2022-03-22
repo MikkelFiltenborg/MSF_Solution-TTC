@@ -54,7 +54,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                                     "\nTast [ 1 ] for Fodbold kamp programmet" +
                                     "\nTast [ 2 ] for Danse konkurrence point beregner" +
                                     "\nTast [ 3 ] for Password redigering" +
-                                    "\nTast [ 0 ] for at retunere til hovedmenuen");
+                                    "\nTast [ 0 ] for at returnere til hovedmenuen");
                                 Console.Write("\nSkriv her: ");
                                 svar = Console.ReadLine();
 
@@ -66,7 +66,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                                 {
                                     //Informere brugeren om at programmet afsluttes, med en besked der vises i 2 sekunder før programmet lukker.
                                     case "0":
-                                        Console.WriteLine("Retunere til hovedmenuen");
+                                        Console.WriteLine("Returnere til hovedmenuen");
                                         Thread.Sleep(1000);
                                         break;
 

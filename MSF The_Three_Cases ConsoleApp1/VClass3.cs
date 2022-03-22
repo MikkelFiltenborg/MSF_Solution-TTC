@@ -18,7 +18,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
         //Login.
         public static bool Login()
         {
-            string bruger, password, filnavn = @"C:\Users\MikFil\Desktop\Password.txt";
+            string bruger, password, filnavn = @"C:\Users\MikFil\Desktop\Login.txt";
             bool login;
 
             //Beder brugren om deres login.
@@ -38,9 +38,9 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             //Hvis login = true, informeres brugeren om at deres login er bekræftet.
             if (login == true)
             {
-                Console.WriteLine("Brugernavn Godkendt\n");
+                Console.WriteLine("Brugernavn godkendt");
                 Thread.Sleep(500);
-                Console.WriteLine("Password godkendt");
+                Console.WriteLine("\nPassword godkendt");
                 Thread.Sleep(1000);
                 Console.Clear();
                 return true;
@@ -58,24 +58,24 @@ namespace MSF_The_Three_Cases_ConsoleApp1
         //Opret bruger.
         public static void NewUser()
         {
-            string bruger = "", password, filnavn = @"C:\Users\MikFil\Desktop\Password.txt";
+            string bruger = "", password, filnavn = @"C:\Users\MikFil\Desktop\Login.txt";
             bool login;
 
             //Hvis filen Password.txt ikke findes, bruges denne del.
             if (!File.Exists(filnavn))
             {
-                Console.WriteLine("Brugernavnet [ Bruguer1 ] er oprettet.\n");
+                Console.WriteLine("Brugernavnet [ Bruguer1 ] er oprettet.");
 
                 //Password krav.
-                Console.WriteLine("Dit nye password skal opfylde følgende krav:\n" +
-                            " - Tal må ikke være i starten eller slutningen\n" +
-                            " - Skal indeholde både store og små bogstaver\n" +
-                            " - Brugernawn of Password må ikke være ens\n" +
-                            " - Skal indeholde minimum et special tegn\n" +
-                            " - Må ikke indeholde nogen mellemrum\n" +
-                            " - Skal indeholde minimum 12 tegn\n");
+                Console.WriteLine("\nDit nye password skal opfylde følgende krav:" +
+                            "\n - Tal må ikke være i starten eller slutningen" +
+                            "\n - Skal indeholde både store og små bogstaver" +
+                            "\n - Brugernawn of Password må ikke være ens" +
+                            "\n - Skal indeholde minimum et special tegn" +
+                            "\n - Må ikke indeholde nogen mellemrum" +
+                            "\n - Skal indeholde minimum 12 tegn");
 
-                Console.WriteLine("Indtast venligst et password");
+                Console.WriteLine("\nIndtast venligst et password");
                 Console.Write("\nSkriv her: ");
                 password = Console.ReadLine();
 
@@ -87,9 +87,9 @@ namespace MSF_The_Three_Cases_ConsoleApp1
                 //Hvis login = true, informeres brugeren om at deres login er bekræftet.
                 if (login == true)
                 {
-                    Console.WriteLine("Godkendt password\n");
+                    Console.WriteLine("Godkendt password");
                     Thread.Sleep(500);
-                    Console.WriteLine("Bruger1 oprettet");
+                    Console.WriteLine("\nBruger1 oprettet");
                     Thread.Sleep(1000);
                     Console.Clear();
                 }
@@ -115,7 +115,7 @@ namespace MSF_The_Three_Cases_ConsoleApp1
         //Rediger password.
         public static void ChangePassword()
         {
-            string bruger, password, nypassword, filnavn = @"C:\Users\MikFil\Desktop\Password.txt";
+            string bruger, password, nypassword, filnavn = @"C:\Users\MikFil\Desktop\Login.txt";
             bool login, passcheck, nypasscheck;
 
             //Beder brugeren om at indtaste deres login.
@@ -135,21 +135,21 @@ namespace MSF_The_Three_Cases_ConsoleApp1
             if (login == true)
             {
                 Console.Clear();
-                Console.WriteLine("Brugernavn Godkendt\n");
+                Console.WriteLine("Brugernavn godkendt");
                 Thread.Sleep(500);
-                Console.WriteLine("Password godkendt");
+                Console.WriteLine("\nPassword godkendt");
                 Thread.Sleep(1000);
                 Console.Clear();
 
                 //Password krav.
                 Console.WriteLine("Du kan nu ændre dit password");
                 Console.WriteLine("\nDit nye password skal opfylde følgende krav:" +
-                    " - \nTal må ikke være i starten eller slutningen" +
-                    " - \nSkal indeholde både store og små bogstaver" +
-                    " - \nBrugernawn of Password må ikke være ens" +
-                    " - \nSkal indeholde minimum et special tegn" +
-                    " - \nMå ikke indeholde nogen mellemrum" +
-                    " - \nSkal indeholde minimum 12 tegn");
+                    "\n - Tal må ikke være i starten eller slutningen" +
+                    "\n - Skal indeholde både store og små bogstaver" +
+                    "\n - Brugernawn of Password må ikke være ens" +
+                    "\n - Skal indeholde minimum et special tegn" +
+                    "\n - Må ikke indeholde nogen mellemrum" +
+                    "\n - Skal indeholde minimum 12 tegn");
 
                 Console.Write("\nSkriv nyt password her: ");
                 nypassword = Console.ReadLine();

@@ -58,7 +58,6 @@ namespace TTC_ClassLibrary
             }
             //Ikke godkendt.
             return false;
-
         }
 
         //Checker om Passwordet anvender tal i starten eller slutningen.
